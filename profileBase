@@ -1,0 +1,32 @@
+class User:
+   
+    def __init__ (self,first,last,position,auth_lvl):
+        self.first = first
+        self.last = last
+        self.position = position
+        self.auth_lvl = auth_lvl
+       
+     
+       
+    def describe_user(self):
+        return f' {self.last}, {self.first} is a {self.position} with access {self.auth_lvl}.'
+     
+    def greet_user(self):
+        full_name = f'{self.first} {self.last}'
+        return f' Hello {full_name}! Welcome to the network. You have access level {self.auth_lvl}.\n'
+       
+
+       
+emp1 = User('John','Smith','Pen Tester','Hi')
+emp2 = User('Samir','Malik','DevOps','Low')
+emp3 = User('Deen','Khalif', 'Data Analyst', 'Mid')
+
+
+print(emp1.describe_user())
+print(emp1.greet_user())
+
+print(emp2.describe_user())
+print(emp2.greet_user())
+
+print(emp3.describe_user())
+print(emp3.greet_user())
