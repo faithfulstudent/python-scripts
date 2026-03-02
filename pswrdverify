@@ -1,0 +1,59 @@
+
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+#Create Username and Password Variables
+username = []
+
+password = []
+
+#Set condition for Entry Log Loop to Exist
+
+more = 'Y'
+
+#Set Flag for access
+
+access = False
+
+#Run Entry Log
+
+while more == 'Y':
+
+    usnm1= input('Enter a username: ')
+    pswd1 = input('Enter a password: ')
+
+
+    username.append(usnm1)
+    password.append(pswd1)
+    
+    more= input("\nEnter another name? Y/N")
+    
+#Print Complete List
+
+for k,v in zip(username, password):
+    print( 'Username {0} \n Password {1}'.format(k, v))
+    
+#Test the list for a name
+
+testnm = input('Please enter username to access?')
+
+if testnm in username:
+    num = username.index(usnm1)
+#check the password against the username    
+    chck = input('Please enter password: ')
+    if chck == password[num]:
+        print("You have been granted access: ")
+        access = True
+    else:
+        print("Password does not go with username!")
+    
+
+else:
+  print('Username does not exist.')
+  
+  
+if access == True:
+    print('Welcome to Data Games!!')
+    
+else:
+    print('Access denied.')
+    
