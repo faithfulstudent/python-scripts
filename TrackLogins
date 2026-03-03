@@ -1,0 +1,44 @@
+class User:
+   
+    def __init__ (self,first,last,position,auth_lvl,login_attempts=0):
+        self.first = first
+        self.last = last
+        self.position = position
+        self.auth_lvl = auth_lvl
+        self.login_attempts = login_attempts
+       
+     
+       
+    def describe_user(self):
+        return f'{self.last}, {self.first} is a {self.position} with access {self.auth_lvl} and {self.login_attempts} login attempts.'
+     
+    def greet_user(self):
+        full_name = f'{self.first} {self.last}'
+        return f' Hello {full_name}! Welcome to the network. You have access level {self.auth_lvl}.\n'
+   
+    def increment_login_attempt(self):
+        self.login_attempts += 1    
+       
+       
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+       
+       
+       
+   
+   
+   
+
+       
+emp1 = User('John','Smith','Pen Tester','Hi')
+emp2 = User('Samir','Malik','DevOps','Low')
+emp3 = User('Deen','Khalif', 'Data Analyst', 'Mid')
+
+print(emp1.describe_user())
+
+
+emp1.increment_login_attempt()
+print(emp1.describe_user())
+
+emp1.increment_login_attempt()
+print(emp1.describe_user())
